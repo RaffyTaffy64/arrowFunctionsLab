@@ -198,9 +198,7 @@ getUserById(users, '16t', (user) => {
 // Make sure to use an arrow function.
 // You should not use a for loop, but should use the filter method instead.
 
-const evens = array.filter((num) => {
- return num % 2 === 0
-}) 
+const evens = (array) => array % 2 === 0
 
 
 /// /////// PROBLEM 8 //////////
@@ -225,8 +223,9 @@ const startWithLetterA = (array) => {
 //
 // Make sure to use arrow functions combined with the map method.
 
-// REPLACE THIS WITH YOUR CODE
+const formalGreeting = names.map((name) => "Hello, " + name)
 
+// const newArr = fruits.map((fruit) => fruit[0].toUpperCase() + fruit.slice(1))
 /// /////// PROBLEM 10 //////////
 
 // Create a function called sortNumbers which takes in an array of numbers and returns
@@ -235,7 +234,7 @@ const startWithLetterA = (array) => {
 // Remember that by default, JavaScript sorts by converting all items to strings. So you
 // will need to provide a compare function.
 
-// REPLACE THIS WITH YOUR CODE
+const sortNumbers = (numbers) => numbers.sort((a, b) => a-b)
 
 /// /////// PROBLEM 11 //////////
 
@@ -255,7 +254,12 @@ const employees = [
 ];
 // Do not edit the code above.
 
-// REPLACE THIS WITH YOUR CODE
+const findProgrammer = (employees) => {
+  employees.forEach((employee) => {
+    if (employees.job === 'programmer') 
+    {callback(employee)}
+  })
+}
 
 ////////// PROBLEM 12 //////////
 
@@ -282,7 +286,8 @@ const orders = [
   Example: if tax is 0.07, the price afterTax could be calculated like this: afterTax = price * 1.07)
 */
 
-let orderTotals; // Code here
+let orderTotals = orders.sort((price, tax) => orders.price * (1 + orders.tax))
+
 
 /// /////// PROBLEM 13 //////////
 
@@ -298,7 +303,10 @@ const exampleMenuItems = [
 // Create a function called sortMenuItems which takes in an array of objects like the one above
 // and sorts the array by price from smallest to largest. It should return the sorted array.
 
-// REPLACE THIS WITH YOUR CODE
+const sortMenuItems = (objects) => {
+  exampleMenuItems.sort((prices) => a.price - b.price)
+  return prices
+}
 
 /// /////// PROBLEM 14 //////////
 
